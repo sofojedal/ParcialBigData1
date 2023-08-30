@@ -1,0 +1,39 @@
+{
+    "dev": {
+        "app_function": "descargaHtml.descargahtml",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "aws_region": "us-east-1",
+        "project_name": "primer-parcial-l1",
+        "runtime": "python3.8",
+        "s3_bucket": "parcial1bd",
+        "events": [{
+           "function": "descargaHtml.descargahtml", // The function to execute
+           "expression": "cron(0/5 * ? * MON-FRI *)" // When to execute it (in cron or rate format)
+       }]
+    },
+    
+    "dev2": {
+        "app_function": "crearCsv.descargacsv",
+        "keep_warm": false,
+        "role_name": "LabRole",
+        "manage_roles": false,
+        "apigateway_enabled": false,
+        "aws_region": "us-east-1",
+        "project_name": "primer-parcial-l2",
+        "runtime": "python3.8",
+        "s3_bucket": "parcial1bd",
+        "events": [{
+            "function": "crearCsv.descargacsv",
+            "event_source": {
+                  "arn":  "arn:aws:s3:::parcial1bd",
+                  "events": [
+                    "s3:ObjectCreated:*" 
+                  ]
+               }
+            }]
+    }
+    
+}

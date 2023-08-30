@@ -59,10 +59,11 @@ jobs:
       - name: Zappa
         run: |
             source env/bin/activate
-            zappa deploy dev
-            zappa deploy dev2
-    
-          # zappa update dev
-          # zappa update dev2
+            zappa update dev
+            zappa update dev2
+      
+          # zappa deploy dev
+          # zappa deploy dev2
+  
         
           

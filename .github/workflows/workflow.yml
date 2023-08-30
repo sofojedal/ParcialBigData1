@@ -28,18 +28,11 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Listar archivos
-        run: |
-          ls
-          pwd
-
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-            aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-            aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+            aws-access-key-id: ${{secrets.AWS_ACCESS_KEY }}
+            aws-secret-access-key: ${{secrets.AWS_SECRET_KEY}}
             aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
             aws-region: us-east-1
 

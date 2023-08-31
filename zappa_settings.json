@@ -10,14 +10,8 @@
         "runtime": "python3.8",
         "s3_bucket": "parcial1bucket1",
         "events": [{
-           "function": "descargaHtml.descargahtml", // The function to execute
-            "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1bucket1",
-                  "events": [
-                    "s3:ObjectCreated:*" 
-                  ]
-               }
-           "expression": "cron(25 02 * * ? *)" // When to execute it (in cron or rate format)
+           "function": "descargaHtml.descargahtml",
+           "expression": "cron(25 02 * * ? *)"
        }]
     },
     

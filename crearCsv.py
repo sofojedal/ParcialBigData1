@@ -30,7 +30,7 @@ def descargacsv():
             "\n"
 
     boto3.client('s3').put_object(Body=csv_tiempo,
-                                  Bucket='parcial1bucket1',
+                                  Bucket='parcial1bucket2',
                                   Key=str('headlines/final' +
                                           '/periodico=eltiempo/year=' +
                                           nombre[:4]+'-month=' +
@@ -56,7 +56,7 @@ def descargacsv():
             "\n"
 
     boto3.client('s3').put_object(Body=csv_publimetro,
-                                  Bucket='parcial1bucket1',
+                                  Bucket='parcial1bucket2',
                                   Key=str('headlines/final' +
                                           '/periodico=publimetro/year=' +
                                           nombre[:4]+'-month=' +

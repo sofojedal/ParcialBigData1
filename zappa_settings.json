@@ -7,7 +7,7 @@
         "apigateway_enabled": false,
         "aws_region": "us-east-1",
         "project_name": "primer-parcial-l1",
-        "runtime": "python3.8",
+        "runtime": "python3.9",
         "s3_bucket": "parcial1bucket1",
         "events": [{
            "function": "descargaHtml.descargahtml",
@@ -23,7 +23,7 @@
         "apigateway_enabled": false,
         "aws_region": "us-east-1",
         "project_name": "primer-parcial-l2",
-        "runtime": "python3.8",
+        "runtime": "python3.9",
         "s3_bucket": "parcial1bucket2",
         "events": [{
             "function": "crearCsv.descargacsv",

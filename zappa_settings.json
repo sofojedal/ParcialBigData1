@@ -8,7 +8,7 @@
         "aws_region": "us-east-1",
         "project_name": "primer-parcial-l1",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1bd",
+        "s3_bucket": "parcial1bucket1",
         "events": [{
            "function": "descargaHtml.descargahtml", // The function to execute
            "expression": "cron(29 01 * * ? *)" // When to execute it (in cron or rate format)
@@ -24,11 +24,11 @@
         "aws_region": "us-east-1",
         "project_name": "primer-parcial-l2",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1bd",
+        "s3_bucket": "parcial1bucket1",
         "events": [{
             "function": "crearCsv.descargacsv",
             "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1bd",
+                  "arn":  "arn:aws:s3:::parcial1bucket1",
                   "events": [
                     "s3:ObjectCreated:*" 
                   ]

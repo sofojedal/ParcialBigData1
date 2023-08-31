@@ -7,7 +7,7 @@ def descargacsv():
 
     nombre = str(datetime.today().strftime('%Y-%m-%d'))
     s3 = boto3.resource('s3')
-    bucket = s3.Bucket('parcial1bd')
+    bucket = s3.Bucket('parcial1bucket1')
     obj_tiempo = bucket.Object(str("news/raw/" +
                                    "eltiempo-" + nombre +
                                    ".html"))
@@ -30,7 +30,7 @@ def descargacsv():
             "\n"
 
     boto3.client('s3').put_object(Body=csv_tiempo,
-                                  Bucket='parcial1bd',
+                                  Bucket='parcial1bucket1',
                                   Key=str('headlines/final' +
                                           '/periodico=eltiempo/year=' +
                                           nombre[:4]+'-month=' +
@@ -56,7 +56,7 @@ def descargacsv():
             "\n"
 
     boto3.client('s3').put_object(Body=csv_publimetro,
-                                  Bucket='parcial1bd',
+                                  Bucket='parcial1bucket1',
                                   Key=str('headlines/final' +
                                           '/periodico=publimetro/year=' +
                                           nombre[:4]+'-month=' +

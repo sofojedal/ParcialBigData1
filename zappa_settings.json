@@ -11,7 +11,7 @@
         "s3_bucket": "parcial1bucket1",
         "events": [{
            "function": "descargaHtml.descargahtml",
-           "expression": "cron(26 14 * * ? *)"
+           "expression": "cron(07 15 * * ? *)"
        }]
     },
     

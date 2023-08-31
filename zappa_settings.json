@@ -24,11 +24,11 @@
         "aws_region": "us-east-1",
         "project_name": "primer-parcial-l2",
         "runtime": "python3.8",
-        "s3_bucket": "parcial1bucket1",
+        "s3_bucket": "parcial1bucket2",
         "events": [{
             "function": "crearCsv.descargacsv",
             "event_source": {
-                  "arn":  "arn:aws:s3:::parcial1bucket1",
+                  "arn":  "arn:aws:s3:::parcial1bucket2",
                   "events": [
                     "s3:ObjectCreated:*" 
                   ]

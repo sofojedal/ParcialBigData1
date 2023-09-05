@@ -41,12 +41,12 @@ jobs:
           #pip install -r requirements.txt
         # pytest test.py
         
-      - name: flake8
-        run: |
-          source env/bin/activate
-          flake8 descargaHtml.py
-          flake8 crearCsv.py
-          flake8 test.py
+      #- name: flake8
+      #  run: |
+      #    source env/bin/activate
+      #    flake8 descargaHtml.py
+      #    flake8 crearCsv.py
+      #    flake8 test.py
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1

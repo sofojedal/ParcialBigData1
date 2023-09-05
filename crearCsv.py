@@ -62,3 +62,5 @@ def descargacsv():
                                           nombre[:4]+'-month=' +
                                           nombre[5:7]+'-day=' +
                                           nombre[8:]+'-publimetro.csv'))
+    
+    return [csv_tiempo, csv_publimetro]
